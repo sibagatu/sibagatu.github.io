@@ -23,7 +23,7 @@ theme:
   dribbble:
   facebook:
   flickr:
-  github: "rohanchandra/type-theme"
+  github: "sibagatu"
   google_plus:
   instagram:
   linkedin:  https://www.linkedin.com/in/sibagatu
@@ -33,7 +33,7 @@ theme:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "twitter"
+  twitter: false
   wordpress:
   youtube:
 
