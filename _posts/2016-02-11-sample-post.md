@@ -16,3 +16,6 @@ Another mathematical formula example:
 $$
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
 $$
+
+Nice! In the next post I would like to test D3 integration for data-driven documenat implementation. 
+
