@@ -2,7 +2,7 @@
 layout: post
 title: Ruslan's first blog post!
 ---
-Initially I was thinking of using a CMS (Wordpress) for my blog, but then I wanted to start with something minimalistic, fast and maintanable by someone without a deep knowlegdge of HMTL/CSS. This is how I decided to use [Jekyll](https://jekyllrb.com/) with [Markdown](https://daringfireball.net/projects/markdown/) a text-to-HTML converter. For hosting I am using the Github. It is very easy and convinient to setup Jekyll on Github. Just clone one of the many Jekyll themes change the 'gitbub_username.github.io' and your blog is good to go!
+Initially I was thinking of using a CMS (Wordpress) for my blog, but then I wanted to start with something minimalistic, fast and maintanable by someone without a deep knowledge of HMTL/CSS. This is how I decided to use [Jekyll](https://jekyllrb.com/) with [Markdown](https://daringfireball.net/projects/markdown/) a text-to-HTML converter. For hosting I am using the Github. It is very easy and convinient to setup Jekyll on Github. Just clone one of the many Jekyll themes change the 'gitbub_username.github.io' and your blog is good to go!
 Another cool feature of Jekyll is that it is neatly integrated with [Katex](https://github.com/Khan/KaTeX), which is a fast TeX math .js library. Here are some the renderings of this neat library.
 
 Mathemathical formula example:
