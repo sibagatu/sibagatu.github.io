@@ -14,6 +14,7 @@ OK, here is the plan:
 5.  Build a contour map of the world that shows the latency delay everywhere.
 
 Here are the modules that I included and functions that I wrote:
+
 '''
 import random
 import geocoder
