@@ -15,7 +15,7 @@ OK, here is the plan:
 
 Here are the modules that I included and functions that I wrote:
 
-'''
+~~~
 import random
 import geocoder
 import subprocess 
@@ -74,5 +74,5 @@ def new_geocode_ip_ver2(ipandresponse):
             lng="Non-pingable, no GC"
         
         return lat, lng
-'''
-
+~~~
+{: .language-python}
