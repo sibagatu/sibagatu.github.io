@@ -13,3 +13,64 @@ OK, here is the plan:
 4.  Graphically map all of the responsive and geocoded IPs.
 5.  Build a contour map of the world that shows the latency delay everywhere.
 
+Here are the modules that I included and functions that I wrote:
+'''
+import random
+import geocoder
+import subprocess 
+import re
+import numpy
+from random import randrange
+from multiprocessing.dummy import Pool as ThreadPool 
+import pickle
+import time
+
+#write a function to ping an ip with returned average response time
+def ping(ip):
+    ping_response = subprocess.Popen(["ping", ip, "-n", '1'], stdout=subprocess.PIPE).stdout.read()
+    match=re.search('Average = (\d+)', str(ping_response))
+    if match:
+        return match.group(1)
+        print("Avg delay=", match.group(1))
+      
+    else:
+        return str(0)
+       
+#writing a function that takes index, geocodes the ip 
+def new_geocode_ip(ipandresponse):
+    i=0
+    lat=[]
+    lng=[]
+    for ip in ipandresponse[:,0]:
+        if i%1000==0:
+            print("Geocoding stage: "+ str(i))
+        if ipandresponse[i,1]!='0':
+            g=geocoder.google(ip)
+            time.sleep(1)                   #avoid Google service limit
+            if g.ok: 
+                lat.append(str(g.latlng[0]))
+                lng.append(str(g.latlng[1]))
+            else:
+                lat.append("GC failed ")
+                lng.append("GC failed")
+        else:
+            lat.append("Non-pingable, no GC")
+            lng.append("Non-pingable, no GC")
+        i=i+1
+    return lat, lng
+
+#writing a funciton that takes index, geocodes the ip individualy for multithreading 
+def new_geocode_ip_ver2(ipandresponse):
+        if ipandresponse[1]!='0':
+            match=geolite2.lookup(ipandresponse[0])
+            if match is not None: 
+                lat, lng = match.location 
+            else:
+                lat="GC failed"
+                lng="GC failed"
+        else:
+            lat="Non-pingable, no GC"
+            lng="Non-pingable, no GC"
+        
+        return lat, lng
+'''
