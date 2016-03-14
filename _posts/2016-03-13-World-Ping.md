@@ -6,6 +6,7 @@ I was really impressed by the maps produced in this [blog post](http://erikbern.
 OK, here is the plan:
 
 1.  Randomly generate thousands/millions of IPs (Internet Protocol address in IPv4 version) so that they conform to the basic IP naming conventions.
+
 2.  Ping each one of those random IPs and record the respective response delay if a given IP is responsive. 
 3.  Geocode (get approximate latitude and longitude) the responsive IPs.
 4.  Graphically map all of the responsive and geocoded IPs
