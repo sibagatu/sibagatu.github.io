@@ -75,3 +75,4 @@ def new_geocode_ip_ver2(ipandresponse):
         
         return lat, lng
 '''
+
